@@ -3,7 +3,8 @@
 set -Ceu
 
 if [ -z "$TMUX" ]; then
-  exit 1
+  tmux display-message "Failed to start fzf_tmux_session: tmux process is not running."
+  exit 0
 fi
 
 SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
