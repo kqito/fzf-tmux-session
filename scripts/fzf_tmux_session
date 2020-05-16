@@ -7,7 +7,7 @@ if [ -z "$TMUX" ]; then
 fi
 
 SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-selected_session="$(tmux list-sessions -F \#S | fzf-tmux -d 30 --preview="${SCRIPTS_DIR}/show_session_tree {} {q}" | cut -d : -f 1)"
+selected_session="$(tmux list-sessions -F \#S | fzf-tmux -d 30 --preview="${SCRIPTS_DIR}/show_session_tree {} {q}")"
 if [ -n "$selected_session" ]; then
   tmux switch -t $selected_session
 fi
