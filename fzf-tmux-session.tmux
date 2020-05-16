@@ -33,9 +33,6 @@ bind_key() {
 
 readonly cmd="$(is_fzf-tmux_excutable)"
 
-# delay with sleep to compensate for tmux starting time
-sleep 1
-
 if [ -z cmd ]; then
   tmux display-message "Failed to load fzf-tmux-session: fzf-tmux command was not found on the PATH"
 else
