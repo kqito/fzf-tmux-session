@@ -2,6 +2,8 @@
 
 set -Ceu
 
+trap 'exit 0' EXIT
+
 if [ -z "$TMUX" ]; then
   tmux display-message "Failed to start fzf_tmux_session: tmux process is not running."
   exit 0
