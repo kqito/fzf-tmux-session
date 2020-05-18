@@ -22,7 +22,7 @@ Then reload `.tmux.conf` and install it with `prefix + I`.
 
 Now you can use `fzf-tmux-session`.
 
-### Munual
+### Manual
 Clone this repository from github with the following command.
 
 ```
